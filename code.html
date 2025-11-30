@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html class="dark" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>全球稀土储量仪表板</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 300,
+            'GRAD' 0,
+            'opsz' 24;
+            font-size: 1.25rem;line-height: 1;
+        }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#1173d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+              "geo-dark-blue": "#0A192F",
+              "geo-charcoal": "#1E2A3A",
+              "geo-metallic-grey": "#8892B0",
+              "geo-mineral-green": "#64FFDA",
+              "geo-highlight-red": "#E63946",
+              "geo-text-light": "#E6F1FF"
+            },
+            fontFamily: {
+              "display": ["Space Grotesk", "Noto Sans SC", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display flex items-center justify-center min-h-screen p-4">
+<div class="w-[577px] h-[400px] bg-geo-dark-blue rounded-lg border border-geo-charcoal/50 shadow-2xl flex flex-col p-4 text-geo-text-light">
+<header class="flex justify-between items-center pb-2 border-b border-geo-metallic-grey/20">
+<h3 class="text-geo-text-light tracking-wide text-base font-bold">全球稀土储量分布</h3>
+<p class="text-geo-metallic-grey text-xs font-normal">数据来源: USGS, 2023</p>
+</header>
+<main class="flex-grow flex items-center py-3 gap-6">
+<div class="relative w-48 h-48 flex-shrink-0 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+<circle cx="18" cy="18" fill="transparent" r="15.915" stroke="#1E2A3A" stroke-width="3"></circle>
+<circle cx="18" cy="18" fill="transparent" r="15.915" stroke="#E63946" stroke-dasharray="33.8, 66.2" stroke-dashoffset="0" stroke-width="3"></circle>
+<circle cx="18" cy="18" fill="transparent" r="15.915" stroke="#64FFDA" stroke-dasharray="16.9, 83.1" stroke-dashoffset="-33.8" stroke-width="3"></circle>
+<circle cx="18" cy="18" fill="transparent" r="15.915" stroke="#457B9D" stroke-dasharray="16.2, 83.8" stroke-dashoffset="-50.7" stroke-width="3"></circle>
+<circle cx="18" cy="18" fill="transparent" r="15.915" stroke="#1D3557" stroke-dasharray="16.2, 83.8" stroke-dashoffset="-66.9" stroke-width="3"></circle>
+<circle cx="18" cy="18" fill="transparent" r="15.915" stroke="#8892B0" stroke-dasharray="16.9, 83.1" stroke-dashoffset="-83.1" stroke-width="3"></circle>
+</svg>
+<div class="absolute text-center">
+<p class="text-geo-metallic-grey text-xs font-medium leading-tight">全球总储量</p>
+<p class="text-geo-text-light text-2xl font-bold tracking-tighter">1.3亿吨</p>
+<p class="text-geo-metallic-grey text-xs font-medium leading-tight">(REO)</p>
+</div>
+</div>
+<div class="flex-grow">
+<table class="w-full text-left">
+<thead>
+<tr class="text-geo-metallic-grey border-b border-geo-metallic-grey/20">
+<th class="py-1 px-2 text-xs font-medium w-2/5">国家/地区</th>
+<th class="py-1 px-2 text-xs font-medium text-right">储量(万吨)</th>
+<th class="py-1 px-2 text-xs font-medium text-right">占比</th>
+</tr>
+</thead>
+<tbody>
+<tr class="text-geo-text-light font-medium">
+<td class="py-1.5 px-2 text-sm flex items-center"><span class="w-2 h-2 rounded-full bg-geo-highlight-red mr-2"></span>中国</td>
+<td class="py-1.5 px-2 text-sm text-right">4,400</td>
+<td class="py-1.5 px-2 text-sm text-right">33.8%</td>
+</tr>
+<tr class="text-geo-text-light/90">
+<td class="py-1.5 px-2 text-sm flex items-center"><span class="w-2 h-2 rounded-full bg-geo-mineral-green mr-2"></span>越南</td>
+<td class="py-1.5 px-2 text-sm text-right">2,200</td>
+<td class="py-1.5 px-2 text-sm text-right">16.9%</td>
+</tr>
+<tr class="text-geo-text-light/90">
+<td class="py-1.5 px-2 text-sm flex items-center"><span class="w-2 h-2 rounded-full bg-[#457B9D] mr-2"></span>巴西</td>
+<td class="py-1.5 px-2 text-sm text-right">2,100</td>
+<td class="py-1.5 px-2 text-sm text-right">16.2%</td>
+</tr>
+<tr class="text-geo-text-light/90">
+<td class="py-1.5 px-2 text-sm flex items-center"><span class="w-2 h-2 rounded-full bg-[#1D3557] mr-2"></span>俄罗斯</td>
+<td class="py-1.5 px-2 text-sm text-right">2,100</td>
+<td class="py-1.5 px-2 text-sm text-right">16.2%</td>
+</tr>
+<tr class="text-geo-metallic-grey">
+<td class="py-1.5 px-2 text-sm flex items-center"><span class="w-2 h-2 rounded-full bg-geo-metallic-grey mr-2"></span>其他</td>
+<td class="py-1.5 px-2 text-sm text-right">2,200</td>
+<td class="py-1.5 px-2 text-sm text-right">16.9%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</main>
+<footer class="bg-geo-charcoal/50 rounded-md p-3 flex items-start gap-3 mt-auto">
+<span class="material-symbols-outlined text-geo-mineral-green mt-0.5" data-icon="lightbulb">lightbulb</span>
+<p class="text-geo-metallic-grey text-xs leading-snug">
+                中国储量占全球约三分之一，越南、巴西、俄罗斯合计占比近50%，形成多极资源格局。
+            </p>
+</footer>
+</div>
+</body></html>
